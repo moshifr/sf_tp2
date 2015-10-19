@@ -127,6 +127,16 @@ foreach ($paginator as $post) { <br>
 &nbsp;&nbsp;&nbsp;echo $post->getHeadline() . "\n"; <br>
 }  <br>
 
+ou 
+> // on compte le nombre d'article maximum via une query builder  dans le repository (function countArticle())
+// que l'on va diviser par le nombre d'élément souhaité par page pour avoir le nombre de page pour la pagination
+   $query = $this->createQueryBuilder('a')
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->select('COUNT(a)')     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->getQuery();
+  return $query->getSingleScalarResult();
+           
+           
+
 - Relations  entités 
 > /**
  \* @ORM\OneToMany(targetEntity="DeskComment")
