@@ -216,6 +216,13 @@ login_check: <br>
  &nbsp;&nbsp;&nbsp;access_control: <br>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- { path: ^/admin, roles: ROLE_ADMIN }
 
+UserInterface : 
+http://symfony.com/doc/current/cookbook/security/custom_provider.html
+
+UserLogin : 
+1. http://symfony.com/doc/current/cookbook/security/entity_provider.html#security-crete-user-entity
+2. http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+3. http://symfony.com/doc/current/cookbook/security/form_login.html (optionnel)
 
 
 
@@ -269,3 +276,4 @@ Corrections :
 - Dans DefaultController ou FrontController selon votre projet, modifiez IndexAction, vous pouvez récupérer l'IndexAction   du premier TP pour réaliser la pagination
  6. 
 - Idem pour menu par catégorie
+ 
